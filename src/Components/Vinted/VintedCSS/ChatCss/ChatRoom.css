@@ -1,0 +1,110 @@
+/* ChatRoom CSS */
+.chat-room {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 1em;
+  background-color: #f1f1f1;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+.message p {
+  margin: 0;
+}
+
+.sent {
+  align-self: flex-end;
+  background-color: #c3e4ff; /* Colore per il messaggio inviato */
+  text-align: right;
+}
+
+.received {
+  align-self: flex-start;
+  background-color: #e0e0e0; /* Colore per il messaggio ricevuto */
+}
+
+.message-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.message-input input {
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  flex: 1;
+  font-size: 1em;
+}
+
+.message-input button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.message-input button:hover {
+  background-color: #0056b3;
+}
+
+.purchase-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.purchase-button:hover {
+  background-color: #218838;
+}
+
+/* Back button styling */
+.back-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.back-button:hover {
+  color: #0056b3;
+}
+
+.arrow {
+  margin-right: 5px;
+  font-size: 20px;
+}

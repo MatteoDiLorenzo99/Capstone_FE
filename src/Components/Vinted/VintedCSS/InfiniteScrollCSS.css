@@ -1,0 +1,25 @@
+.feed-container {
+    padding: 20px;
+    max-width: 1600px;
+    margin: auto;
+  }
+  
+  .feed-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .feed-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  

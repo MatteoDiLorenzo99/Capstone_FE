@@ -1,0 +1,24 @@
+/* ChatPage CSS */
+.chat-page {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f4f7fc;
+    min-height: 100vh;
+    align-items: center;
+  }
+  
+  .chat-header {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .chat-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  

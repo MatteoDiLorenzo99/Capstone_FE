@@ -1,0 +1,181 @@
+/* Navbar principale */
+.navbar {
+    background-color: #fff; /* Sfondo bianco */
+    padding: 12px 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra leggera */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  
+  /* Contenitore della navbar */
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Bottone per tornare alla home */
+  .navbar-home {
+    left: 20px; /* Posiziona il bottone a sinistra */
+  }
+  
+  .navbar-home-btn {
+    background-color: #ff4e00;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .navbar-home-btn:hover {
+    background-color: #e64800;
+  }
+  
+  /* Logo */
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-link {
+    text-decoration: none;
+  }
+  
+  .logo-img {
+    width: 120px; /* Imposta la larghezza del logo */
+    height: auto;
+  }
+  
+  /* Search Bar centrata */
+  .navbar-search {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .search-input {
+    width: 400px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: #ff4e00;
+  }
+  
+  /* Menu di navigazione (Accedi e Registrati a destra) */
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;  /* Sposta a destra */
+  }
+  
+  .navbar-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: color 0.3s;
+  }
+  
+  .navbar-link:hover {
+    color: #ff4e00; /* Colore hover per i link */
+  }
+  
+  .navbar-register {
+    background-color: #ff4e00; /* Colore di sfondo per il link "Registrati" */
+    color: white;
+    border-radius: 20px;
+    padding: 8px 16px;
+  }
+  
+  .navbar-register:hover {
+    background-color: #e64800; /* Colore hover per "Registrati" */
+  }
+  
+  /* Icona aiuto (opzionale) */
+  .navbar-help {
+    display: flex;
+    align-items: center;
+  }
+
+
+  /* Menu di navigazione (Accedi e Registrati a destra) */
+.navbar-links {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;  /* Sposta a destra */
+    position: relative; /* Per il posizionamento relativo del menu */
+  }
+  
+  /* Contenitore del menu a tendina */
+  .profile-menu {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%; /* Posiziona il menu sotto il bottone */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    z-index: 1000;
+  }
+  
+  .dropdown-item {
+    padding: 10px 15px;
+    border: none;
+    background: none;
+    color: #333;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f4f4f4;
+  }
+  
+  /* Aggiungi stile per il pulsante "Il mio profilo" */
+  .navbar-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: color 0.3s;
+  }
+  
+  .navbar-link:hover {
+    color: #ff4e00; /* Colore hover per i link */
+  }
+  
+  

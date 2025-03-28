@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+</head>
+<body class="gamebody">
+    <script>
+        const config = {
+            type: Phaser.AUTO,
+            width: 800,
+            height: 600,
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity: { y: 300 },
+                    debug: false
+                }
+            },
+            scene: {
+                preload: preload,
+                create: create,
+                update: update
+            }
+        };
+
+        let bird;
+        let pipes;
+        let score = 0;
+        let scoreText;
+        let gameOver = false;
+
+        const game = new Phaser.Game(config);
+
+        function preload() {
+            this.load.image('bird', 'https://phaser.io/images/tutorials/flappybird/bird.png');
+            this.load.image('pipe', 'https://phaser.io/images/tutorials/flappybird/pipe.png');
+        }
+
+        function create() {
+            bird = this.physics.add.sprite(100, 300, 'bird');
+            bird.setCollideWorldBounds(true);
+            bird.setBounce(0.2);
+            bird.setGravityY(500);
+
+            pipes = this.physics.add.group({
+                key: 'pipe',
+                repeat: 1,
+                setXY: { x: 800, y: 0, stepX: 300 }
+            });
+
+            pipes.children.iterate(function (pipe) {
+                pipe.setVelocityX(-200);
+                pipe.setOrigin(0, 0);
+                pipe.setScale(1, Phaser.Math.Between(2, 5));
+                pipe.setDepth(1);
+            });
+
+            scoreText = this.add.text(16, 16, 'Score: 0', {
+                fontSize: '32px',
+                fill: '#000'
+            });
+
+            this.input.on('pointerdown', jump, this);
+        }
+
+        function update() {
+            if (gameOver) {
+                return;
+            }
+
+            if (bird.y > 600 || bird.y < 0) {
+                gameOver = true;
+                scoreText.setText('Game Over! Score: ' + score);
+            }
+
+            pipes.children.iterate(function (pipe) {
+                if (pipe.x < -50) {
+                    pipe.x = 800;
+                    pipe.setY(Phaser.Math.Between(100, 500));
+                    score += 1;
+                    scoreText.setText('Score: ' + score);
+                }
+            });
+
+            this.physics.world.collide(bird, pipes, gameOverHandler, null, this);
+        }
+
+        function jump() {
+            if (gameOver) {
+                return;
+            }
+            bird.setVelocityY(-300);
+        }
+
+        function gameOverHandler() {
+            gameOver = true;
+            scoreText.setText('Game Over! Score: ' + score);
+        }
+    </script>
+</body>
+</html>

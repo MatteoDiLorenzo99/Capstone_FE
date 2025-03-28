@@ -1,0 +1,34 @@
+.new-arrivals-section {
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .section-header h2 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .see-all {
+    font-size: 14px;
+    color: #0073e6;
+    text-decoration: none;
+  }
+  
+  .items-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 10px;
+  }
+  
+  .items-container::-webkit-scrollbar {
+    display: none;
+  }
+  

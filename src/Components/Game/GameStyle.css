@@ -1,0 +1,120 @@
+
+  /* src/style.css */
+#gamebody {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.game-container {
+  text-align: center;
+}
+
+.score {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.game-over {
+  font-size: 40px;
+  color: red;
+  font-weight: bold;
+}
+
+.board {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: #222;
+  border: 2px solid #fff;
+  margin: 0 auto;
+}
+
+.snake {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #00ff00;
+}
+
+.food {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff0000;
+}
+
+
+/* Stile per il paragrafo */
+#gameP {
+  background-color: #f0f8ff;  /* Colore di sfondo chiaro */
+  border: 2px solid #4CAF50;  /* Bordo verde per un tocco dinamico */
+  padding: 20px;  /* Distanza tra il testo e il bordo */
+  border-radius: 10px;  /* Angoli arrotondati */
+  font-family: 'Arial', sans-serif;  /* Font pulito e leggibile */
+  font-size: 16px;  /* Dimensione del testo */
+  color: #333;  /* Colore del testo */
+  max-width: 300px;  /* Larghezza massima */
+  margin: 20px auto;  /* Centra il paragrafo nella pagina */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Ombra per dare profondità */
+}
+
+/* Stile per le righe di testo */
+#gameP br {
+  display: block;  /* Forza il "break" a comportarsi come una riga separata */
+  margin-bottom: 10px;  /* Distanza tra le righe */
+}
+
+/* Aggiungere uno stile per il testo delle voci */
+#gameP br:nth-of-type(2) {
+  font-weight: bold;
+  color: #4CAF50;  /* Colore verde per "mangiare le mele" */
+}
+
+#gameP br:nth-of-type(3) {
+  font-style: italic;
+  color: #ff6347;  /* Colore rosso per "pregare che non si buggi" */
+}
+
+/* Stile per i bottoni */
+#buttongame {
+background-color: #4CAF50;  /* Colore di sfondo verde */
+color: white;  /* Colore del testo bianco */
+border: none;  /* Rimuovi il bordo predefinito */
+padding: 12px 24px;  /* Spaziatura interna */
+font-size: 16px;  /* Dimensione del testo */
+font-weight: bold;  /* Testo in grassetto */
+border-radius: 8px;  /* Angoli arrotondati */
+cursor: pointer;  /* Aggiungi un cursore a forma di mano */
+transition: background-color 0.3s ease, transform 0.2s ease;  /* Animazione per cambio colore e effetto di pressione */
+margin: 10px 0;  /* Distanza tra i bottoni */
+display: inline-block;  /* Mantiene i bottoni sulla stessa riga */
+}
+
+/* Hover: cambia colore al passaggio del mouse */
+#buttongame:hover {
+background-color: #45a049;  /* Colore verde più scuro */
+transform: scale(1.05);  /* Leggero ingrandimento al passaggio del mouse */
+}
+
+/* Focus: effetto quando il bottone viene selezionato */
+#buttongame:focus {
+outline: none;  /* Rimuovi il bordo di focus predefinito */
+box-shadow: 0 0 8px rgba(0, 128, 0, 0.6);  /* Aggiungi un'ombra verde quando il bottone è in focus */
+}
+
+/* Stile per il secondo bottone con un colore diverso */
+#buttongame:nth-of-type(2) {
+background-color: #ff6347;  /* Colore di sfondo rosso per il secondo bottone */
+}
+
+/* Hover per il secondo bottone */
+#buttongame:nth-of-type(2):hover {
+background-color: #e55347;  /* Colore rosso più scuro al passaggio del mouse */
+}
